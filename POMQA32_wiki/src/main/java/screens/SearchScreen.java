@@ -10,32 +10,30 @@ public class SearchScreen extends MainScreen{
         super(driver);
     }
 
-    @FindBy(xpath = "?????")
+
+    @FindBy(xpath = "//*[@resource-id='org.wikipedia:id/search_src_text']")
     MobileElement textInput;
-    @FindBy(xpath = )
-    MobileElement
+    @FindBy(xpath = "//*[@resource-id='org.wikipedia:id/page_list_item_container']")
+    MobileElement liner;
 
+    public SearchScreen fillInText(String text) {
+      // should(textInput,20);
+        type(textInput, text);
+        return this;
+    }
 
+    public SearchScreen closeBoard() {
+        hideKeyboard();
+        return this;
+    }
 
-
-
-    public boolean isLiner(){
+    public boolean isLiner() {
         return liner.isDisplayed();
     }
 
-    public SearchScreen closeBoard(){
-        hideKeyboard();
-        return this;
-
-    }
-
-    public SearchScreen isLinerPresent(){
-        Assert.assertTrue(liner.);
-    }
-
-    public Object fillInText(String text) {
-        should(textInput,20);
-        type(textInput,text);
+    public SearchScreen isLinerPresent() {
+        Assert.assertTrue(liner.isDisplayed());
         return this;
     }
 }
+//ira@gmail.com/ Iraa777!/
