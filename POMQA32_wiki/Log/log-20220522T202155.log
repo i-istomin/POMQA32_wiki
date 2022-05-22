@@ -1,0 +1,24 @@
+20:22:11  INFO  configwiki.ConfigurationWiki - Start testlogin1
+20:22:11  INFO  configwiki.ConfigurationWiki - Starting 'login1' test
+20:22:11  INFO  configwiki.AppiumListener - Start find element--->By.xpath: //*[@resource-id='org.wikipedia:id/explore_overflow_account_name']
+20:22:11  INFO  configwiki.AppiumListener - The element was found--->By.xpath: //*[@resource-id='org.wikipedia:id/explore_overflow_account_name']
+20:22:11  INFO  configwiki.AppiumListener - You have a problem with---An element could not be located on the page using the given search parameters.
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'desktopirina', ip: '127.0.1.1', os.name: 'Linux', os.arch: 'amd64', os.version: '5.14.0-1036-oem', java.version: '11.0.15'
+Driver info: io.appium.java_client.AppiumDriver
+Capabilities {app: /home/i-istomin/TelRan/wiki..., appActivities: .main.MainActivity, appPackage: org.wikipedia, automationName: Appium, databaseEnabled: false, desired: {app: /home/i-istomin/TelRan/wiki..., appActivities: .main.MainActivity, appPackage: org.wikipedia, automationName: Appium, deviceName: Nex, platformName: android, platformVersion: 8.0}, deviceApiLevel: 26, deviceManufacturer: Google, deviceModel: Android SDK built for x86, deviceName: emulator-5554, deviceScreenDensity: 480, deviceScreenSize: 1080x1920, deviceUDID: emulator-5554, javascriptEnabled: true, locationContextEnabled: false, networkConnectionEnabled: true, pixelRatio: 3, platform: LINUX, platformName: Android, platformVersion: 8.0.0, statBarHeight: 72, takesScreenshot: true, viewportRect: {height: 1704, left: 0, top: 72, width: 1080}, warnings: {}, webStorageEnabled: false}
+Session ID: f753afef-5a75-4259-9ed4-1d7791dba1fb
+*** Element info: {Using=xpath, value=//*[@resource-id='org.wikipedia:id/explore_overflow_account_name']}[Ljava.lang.StackTraceElement;@69d45cca
+20:22:12  INFO  configwiki.AppiumListener - Screen with error--- POMQA32_wiki/src/test/resources/Screen/screenshot1332.png
+20:22:12  INFO  configwiki.AppiumListener - Start find element--->By.xpath: //*[@resource-id='org.wikipedia:id/explore_overflow_account_name']
+20:22:12  INFO  configwiki.AppiumListener - The element was found--->By.xpath: //*[@resource-id='org.wikipedia:id/explore_overflow_account_name']
+20:22:12  INFO  configwiki.AppiumListener - You have a problem with---An element could not be located on the page using the given search parameters.
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'desktopirina', ip: '127.0.1.1', os.name: 'Linux', os.arch: 'amd64', os.version: '5.14.0-1036-oem', java.version: '11.0.15'
+Driver info: io.appium.java_client.AppiumDriver
+Capabilities {app: /home/i-istomin/TelRan/wiki..., appActivities: .main.MainActivity, appPackage: org.wikipedia, automationName: Appium, databaseEnabled: false, desired: {app: /home/i-istomin/TelRan/wiki..., appActivities: .main.MainActivity, appPackage: org.wikipedia, automationName: Appium, deviceName: Nex, platformName: android, platformVersion: 8.0}, deviceApiLevel: 26, deviceManufacturer: Google, deviceModel: Android SDK built for x86, deviceName: emulator-5554, deviceScreenDensity: 480, deviceScreenSize: 1080x1920, deviceUDID: emulator-5554, javascriptEnabled: true, locationContextEnabled: false, networkConnectionEnabled: true, pixelRatio: 3, platform: LINUX, platformName: Android, platformVersion: 8.0.0, statBarHeight: 72, takesScreenshot: true, viewportRect: {height: 1704, left: 0, top: 72, width: 1080}, warnings: {}, webStorageEnabled: false}
+Session ID: f753afef-5a75-4259-9ed4-1d7791dba1fb
+*** Element info: {Using=xpath, value=//*[@resource-id='org.wikipedia:id/explore_overflow_account_name']}[Ljava.lang.StackTraceElement;@2d5ef498
+20:22:13  INFO  configwiki.AppiumListener - Screen with error--- POMQA32_wiki/src/test/resources/Screen/screenshot1333.png

@@ -28,6 +28,10 @@ public class TooltipScreen extends  BaseScreen {
         should(logOutButton,20);
         return this;
     }
+    public MainScreen logOut(){
+        should(logOutButton,20);
+        logOutButton.click();
+        return new MainScreen(driver);}
 
 }
 
