@@ -18,14 +18,14 @@ public class Login extends ConfigurationWiki {
     }
 
 
-    @Test
+    @Test//ne proshel
     public void login1(){
         logger.info("Starting 'login1' test");
         boolean isLogged=new MainScreen(driver)//propisivaem steps to the test
                 .clickOnFlowButton()
                 .clickOnLoginWikiButton()
-               .fillInLoginForm(Auth.builder().username("Findxpath").password("Irinka123$").build())
-              //  .fillInLoginForm(Auth.builder().username("juliakliot.jk").password("Misha240613").build())
+              // .fillInLoginForm(Auth.builder().username("Findxpath").password("Irinka123$").build())
+                .fillInLoginForm(Auth.builder().username("juliakliot.jk").password("Misha240613").build())
                 .clickOnFlowButton()
                 .isLogged();
 
@@ -61,19 +61,30 @@ public class Login extends ConfigurationWiki {
         logger.info("Test 'login3' passed successfully");
     }
 
-//    @Test
-//    public void login4(String login, String pwd){
-//        logger.info("Starting 'login4' test");
-//        new MainScreen(driver)
+    @Test
+    public void loginData4(String login, String pwd) {
+        String inf = new MainScreen(driver)
+                .clickOnFlowButton()
+                .clickOnLoginWikiButton()
+                .fillInLoginForm(Auth.builder().username("juliakliot.jk").password("Misha240613").build())
+                .clickOnFlowButton()
+                .logOut()
+                .clickOnFlowButton()
+                .getInf();
+        Assert.assertEquals(inf, "Log in to Wikipedia");
+    }
+
+//    @Test(dataProvider = "loginData",dataProviderClass = DataProviderWiki.class)
+//    public void loginData5(String login, String pwd) {
+//        String inf = new MainScreen(driver)
 //                .clickOnFlowButton()
 //                .clickOnLoginWikiButton()
-//                .fillInLoginForm("Findxpath","Irinka123$")
-//          //     .fillInLoginForm(Auth.builder().username("juliakliot.jk").password("Misha240613").build())
+//                .fillInLoginForm(Auth.builder().username("juliakliot.jk").password("Misha240613").build())
 //                .clickOnFlowButton()
-//                .logOut();
-//
-//        Assert.assertTrue(isLogged);
-//        logger.info("Test 'login3' logged out");
-//        logger.info("Test 'login3' passed successfully");
+//                .logOut()
+//                .clickOnFlowButton()
+//                .getInf();
+//        Assert.assertEquals(inf, "Log in to Wikipedia");
 //    }
+
 }

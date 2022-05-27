@@ -139,7 +139,8 @@ public class AppiumListener implements AppiumWebDriverEventListener {
         logger.info("You have a problem with---"+ throwable.getMessage()+throwable.getStackTrace().toString());
         File temp= ((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE);
         int i = (int)(System.currentTimeMillis()/1000)%3600;
-        File screen = new File(" POMQA32_wiki/src/test/resources/Screen/screenshot"+i+".png");
+        File screen = new File("src/test/resources/Screen/screenshot"+i+".png");
+        //File screen = new File(" POMQA32_wiki/src/test/resources/Screen/screenshot"+i+".png");
         logger.info("Screen with error---"+screen);
 
         try{
@@ -147,6 +148,8 @@ public class AppiumListener implements AppiumWebDriverEventListener {
         }
         catch (IOException exc){
             exc.printStackTrace();
+
+
         }
     }
 

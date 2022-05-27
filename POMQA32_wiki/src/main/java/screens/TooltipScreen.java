@@ -20,19 +20,22 @@ public class TooltipScreen extends  BaseScreen {
         return new LoginScreen(driver);
     }
     public  boolean isLogged(){
-        should(logInButton,20);
+        should(logInButton,40);
         return  logInButton.isDisplayed();
     }
     public TooltipScreen isAccountPresentAssert() {
         Assert.assertTrue(logOutButton.isDisplayed());
-        should(logOutButton,20);
+        should(logOutButton,40);
         return this;
     }
     public MainScreen logOut(){
-        should(logOutButton,20);
+        should(logOutButton,40);
         logOutButton.click();
         return new MainScreen(driver);}
 
+    public String getInf () {
+        return logInButton.getText();
+    }
 }
 
 

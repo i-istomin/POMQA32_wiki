@@ -23,7 +23,7 @@
 <tr>
 <td>
 <div class="infoBox" id="tests">
-<div class="counter">1</div>
+<div class="counter">2</div>
 <p>tests</p>
 </div>
 </td>
@@ -35,13 +35,13 @@
 </td>
 <td>
 <div class="infoBox" id="ignored">
-<div class="counter">0</div>
+<div class="counter">1</div>
 <p>ignored</p>
 </div>
 </td>
 <td>
 <div class="infoBox" id="duration">
-<div class="counter">0.414s</div>
+<div class="counter">32.493s</div>
 <p>duration</p>
 </div>
 </td>
@@ -70,40 +70,42 @@
 <div id="tab0" class="tab">
 <h2>Failed tests</h2>
 <div class="test">
-<a name="login1"></a>
-<h3 class="failures">login1</h3>
+<a name="setUp"></a>
+<h3 class="failures">setUp</h3>
 <span class="code">
-<pre>org.openqa.selenium.WebDriverException: java.lang.reflect.UndeclaredThrowableException
+<pre>org.openqa.selenium.SessionNotCreatedException: Unable to create a new remote session. Please check the server log for more details. Original error: An unknown server-side error occurred while processing the command. Original error: Error executing adbExec. Original error: 'Command '/home/i-istomin/Android/Sdk/platform-tools/adb -P 5037 -s emulator-5554 shell pm install -r /data/local/tmp/appium_cache/0cc1725a60a05dbb5d0d09256f2fc6ece7e3b10f.apk' timed out after 20000ms'. Try to increase the 20000ms adb execution timeout represented by 'uiautomator2ServerInstallTimeout' capability
 Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
 System info: host: 'desktopirina', ip: '127.0.1.1', os.name: 'Linux', os.arch: 'amd64', os.version: '5.14.0-1036-oem', java.version: '11.0.15'
-Driver info: driver.version: unknown
-	at app//io.appium.java_client.pagefactory.AppiumElementLocator$WaitingFunction.apply(AppiumElementLocator.java:192)
-	at app//io.appium.java_client.pagefactory.AppiumElementLocator$WaitingFunction.apply(AppiumElementLocator.java:1)
-	at app//org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:249)
-	at app//io.appium.java_client.pagefactory.AppiumElementLocator.waitFor(AppiumElementLocator.java:99)
-	at app//io.appium.java_client.pagefactory.AppiumElementLocator.findElement(AppiumElementLocator.java:119)
-	at app//io.appium.java_client.pagefactory.interceptors.InterceptorOfASingleElement.intercept(InterceptorOfASingleElement.java:59)
-	at app//io.appium.java_client.android.AndroidElement$$EnhancerByCGLIB$$b598166c.click(&lt;generated&gt;)
-	at app//screens.TooltipScreen.clickOnLoginWikiButton(TooltipScreen.java:19)
-	at app//testwiki.Login.login1(Login.java:26)
+Driver info: driver.version: AppiumDriver
+remote stacktrace: UnknownError: An unknown server-side error occurred while processing the command. Original error: Error executing adbExec. Original error: 'Command '/home/i-istomin/Android/Sdk/platform-tools/adb -P 5037 -s emulator-5554 shell pm install -r /data/local/tmp/appium_cache/0cc1725a60a05dbb5d0d09256f2fc6ece7e3b10f.apk' timed out after 20000ms'. Try to increase the 20000ms adb execution timeout represented by 'uiautomator2ServerInstallTimeout' capability
+    at getResponseForW3CError (/tmp/.mount_Appiumjce4F0/resources/app/node_modules/appium/node_modules/appium-base-driver/lib/protocol/errors.js:804:9)
+    at asyncHandler (/tmp/.mount_Appiumjce4F0/resources/app/node_modules/appium/node_modules/appium-base-driver/lib/protocol/protocol.js:388:37)
+    at process._tickCallback (internal/process/next_tick.js:68:7)
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'desktopirina', ip: '127.0.1.1', os.name: 'Linux', os.arch: 'amd64', os.version: '5.14.0-1036-oem', java.version: '11.0.15'
+Driver info: driver.version: AppiumDriver
+	at app//io.appium.java_client.remote.AppiumCommandExecutor$1.createSession(AppiumCommandExecutor.java:216)
+	at app//io.appium.java_client.remote.AppiumCommandExecutor.createSession(AppiumCommandExecutor.java:225)
+	at app//io.appium.java_client.remote.AppiumCommandExecutor.execute(AppiumCommandExecutor.java:250)
+	at app//org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at app//io.appium.java_client.DefaultGenericMobileDriver.execute(DefaultGenericMobileDriver.java:41)
+	at app//io.appium.java_client.AppiumDriver.execute(AppiumDriver.java:1)
+	at app//org.openqa.selenium.remote.RemoteWebDriver.startSession(RemoteWebDriver.java:213)
+	at app//io.appium.java_client.AppiumDriver.startSession(AppiumDriver.java:363)
+	at app//org.openqa.selenium.remote.RemoteWebDriver.&lt;init&gt;(RemoteWebDriver.java:131)
+	at app//io.appium.java_client.DefaultGenericMobileDriver.&lt;init&gt;(DefaultGenericMobileDriver.java:37)
+	at app//io.appium.java_client.AppiumDriver.&lt;init&gt;(AppiumDriver.java:89)
+	at app//io.appium.java_client.AppiumDriver.&lt;init&gt;(AppiumDriver.java:99)
+	at app//configwiki.ConfigurationWiki.setUp(ConfigurationWiki.java:32)
 	at java.base@11.0.15/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base@11.0.15/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 	at java.base@11.0.15/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
 	at java.base@11.0.15/java.lang.reflect.Method.invoke(Method.java:566)
 	at app//org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
-	at app//org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)
-	at app//org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
-	at app//org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
-	at app//org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
-	at app//org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
-	at app//org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
-	at app//org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
-	at java.base@11.0.15/java.util.ArrayList.forEach(ArrayList.java:1541)
-	at app//org.testng.TestRunner.privateRun(TestRunner.java:794)
-	at app//org.testng.TestRunner.run(TestRunner.java:596)
-	at app//org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
-	at app//org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
-	at app//org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
+	at app//org.testng.internal.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:62)
+	at app//org.testng.internal.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:385)
+	at app//org.testng.internal.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:321)
+	at app//org.testng.SuiteRunner.privateRun(SuiteRunner.java:317)
 	at app//org.testng.SuiteRunner.run(SuiteRunner.java:276)
 	at app//org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
 	at app//org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
@@ -132,55 +134,39 @@ Driver info: driver.version: unknown
 	at org.gradle.process.internal.worker.child.SystemApplicationClassLoaderWorker.call(SystemApplicationClassLoaderWorker.java:71)
 	at app//worker.org.gradle.process.internal.worker.GradleWorkerMain.run(GradleWorkerMain.java:69)
 	at app//worker.org.gradle.process.internal.worker.GradleWorkerMain.main(GradleWorkerMain.java:74)
-Caused by: java.lang.reflect.UndeclaredThrowableException
-	at com.sun.proxy.$Proxy37.onException(Unknown Source)
-	at io.appium.java_client.events.DefaultListener.onException(DefaultListener.java:134)
-	at io.appium.java_client.events.DefaultAspect.doAround(DefaultAspect.java:559)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
-	at org.springframework.aop.aspectj.AbstractAspectJAdvice.invokeAdviceMethodWithGivenArgs(AbstractAspectJAdvice.java:634)
-	at org.springframework.aop.aspectj.AbstractAspectJAdvice.invokeAdviceMethod(AbstractAspectJAdvice.java:624)
-	at org.springframework.aop.aspectj.AspectJAroundAdvice.invoke(AspectJAroundAdvice.java:72)
-	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
-	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:750)
-	at org.springframework.aop.interceptor.ExposeInvocationInterceptor.invoke(ExposeInvocationInterceptor.java:97)
-	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
-	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:750)
-	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:692)
-	at io.appium.java_client.AppiumDriver$$EnhancerBySpringCGLIB$$3683644b.findElement(&lt;generated&gt;)
-	at io.appium.java_client.pagefactory.AppiumElementLocator.lambda$0(AppiumElementLocator.java:120)
-	at io.appium.java_client.pagefactory.AppiumElementLocator$WaitingFunction.apply(AppiumElementLocator.java:172)
-	... 54 more
 Caused by: java.lang.reflect.InvocationTargetException
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
 	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
-	at io.appium.java_client.events.ListenerInvocationHandler.invoke(ListenerInvocationHandler.java:46)
-	... 73 more
-Caused by: org.openqa.selenium.WebDriverException: An unknown server-side error occurred while processing the command. Original error: Could not proxy command to remote server. Original error: Error: connect ECONNREFUSED 127.0.0.1:8200
+	at io.appium.java_client.remote.AppiumCommandExecutor$1.createSession(AppiumCommandExecutor.java:193)
+	... 49 more
+Caused by: org.openqa.selenium.WebDriverException: An unknown server-side error occurred while processing the command. Original error: Error executing adbExec. Original error: 'Command '/home/i-istomin/Android/Sdk/platform-tools/adb -P 5037 -s emulator-5554 shell pm install -r /data/local/tmp/appium_cache/0cc1725a60a05dbb5d0d09256f2fc6ece7e3b10f.apk' timed out after 20000ms'. Try to increase the 20000ms adb execution timeout represented by 'uiautomator2ServerInstallTimeout' capability
 Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
 System info: host: 'desktopirina', ip: '127.0.1.1', os.name: 'Linux', os.arch: 'amd64', os.version: '5.14.0-1036-oem', java.version: '11.0.15'
-Driver info: io.appium.java_client.AppiumDriver
-Capabilities {app: /home/i-istomin/TelRan/wiki..., appActivities: .main.MainActivity, appPackage: org.wikipedia, automationName: Appium, databaseEnabled: false, desired: {app: /home/i-istomin/TelRan/wiki..., appActivities: .main.MainActivity, appPackage: org.wikipedia, automationName: Appium, deviceName: Nex, platformName: android, platformVersion: 8.0}, deviceApiLevel: 26, deviceManufacturer: Google, deviceModel: Android SDK built for x86, deviceName: emulator-5554, deviceScreenDensity: 480, deviceScreenSize: 1080x1920, deviceUDID: emulator-5554, javascriptEnabled: true, locationContextEnabled: false, networkConnectionEnabled: true, pixelRatio: 3, platform: LINUX, platformName: Android, platformVersion: 8.0.0, statBarHeight: 72, takesScreenshot: true, viewportRect: {height: 1704, left: 0, top: 72, width: 1080}, warnings: {}, webStorageEnabled: false}
-Session ID: 9e953fec-a797-4498-8c7d-125fbf5bafa4
+Driver info: driver.version: AppiumDriver
+remote stacktrace: UnknownError: An unknown server-side error occurred while processing the command. Original error: Error executing adbExec. Original error: 'Command '/home/i-istomin/Android/Sdk/platform-tools/adb -P 5037 -s emulator-5554 shell pm install -r /data/local/tmp/appium_cache/0cc1725a60a05dbb5d0d09256f2fc6ece7e3b10f.apk' timed out after 20000ms'. Try to increase the 20000ms adb execution timeout represented by 'uiautomator2ServerInstallTimeout' capability
+    at getResponseForW3CError (/tmp/.mount_Appiumjce4F0/resources/app/node_modules/appium/node_modules/appium-base-driver/lib/protocol/errors.js:804:9)
+    at asyncHandler (/tmp/.mount_Appiumjce4F0/resources/app/node_modules/appium/node_modules/appium-base-driver/lib/protocol/protocol.js:388:37)
+    at process._tickCallback (internal/process/next_tick.js:68:7)
 	at java.base@11.0.15/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
 	at java.base@11.0.15/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
 	at java.base@11.0.15/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
 	at java.base@11.0.15/java.lang.reflect.Constructor.newInstance(Constructor.java:490)
-	at app//org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
-	at app//org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
-	at app//org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
-	at app//org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
-	at app//io.appium.java_client.remote.AppiumCommandExecutor.execute(AppiumCommandExecutor.java:250)
-	at app//org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
-	at app//io.appium.java_client.DefaultGenericMobileDriver.execute(DefaultGenericMobileDriver.java:45)
-	at app//io.appium.java_client.AppiumDriver.execute(AppiumDriver.java:1)
-	at app//org.openqa.selenium.remote.RemoteWebDriver.getScreenshotAs(RemoteWebDriver.java:295)
-	at app//configwiki.AppiumListener.onException(AppiumListener.java:140)
-	... 78 more
+	at app//org.openqa.selenium.remote.W3CHandshakeResponse.lambda$errorHandler$0(W3CHandshakeResponse.java:62)
+	at app//org.openqa.selenium.remote.HandshakeResponse.lambda$getResponseFunction$0(HandshakeResponse.java:30)
+	at app//org.openqa.selenium.remote.ProtocolHandshake.lambda$createSession$0(ProtocolHandshake.java:126)
+	at java.base@11.0.15/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:195)
+	at java.base@11.0.15/java.util.Spliterators$ArraySpliterator.tryAdvance(Spliterators.java:958)
+	at java.base@11.0.15/java.util.stream.ReferencePipeline.forEachWithCancel(ReferencePipeline.java:127)
+	at java.base@11.0.15/java.util.stream.AbstractPipeline.copyIntoWithCancel(AbstractPipeline.java:502)
+	at java.base@11.0.15/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:488)
+	at java.base@11.0.15/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:474)
+	at java.base@11.0.15/java.util.stream.FindOps$FindOp.evaluateSequential(FindOps.java:150)
+	at java.base@11.0.15/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
+	at java.base@11.0.15/java.util.stream.ReferencePipeline.findFirst(ReferencePipeline.java:543)
+	at app//org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:128)
+	... 54 more
 </pre>
 </span>
 </div>
@@ -196,8 +182,13 @@ Session ID: 9e953fec-a797-4498-8c7d-125fbf5bafa4
 </tr>
 </thead>
 <tr>
-<td class="failures">login1</td>
-<td class="failures">0.414s</td>
+<td class="skipped">login1</td>
+<td class="skipped">-</td>
+<td class="skipped">ignored</td>
+</tr>
+<tr>
+<td class="failures">setUp</td>
+<td class="failures">32.493s</td>
 <td class="failures">failed</td>
 </tr>
 </table>
@@ -210,7 +201,7 @@ Session ID: 9e953fec-a797-4498-8c7d-125fbf5bafa4
 <input id="line-wrapping-toggle" type="checkbox" autocomplete="off"/>
 </label>
 </div>Generated by 
-<a href="http://www.gradle.org">Gradle 7.4</a> at 22 May 2022, 20:26:43</p>
+<a href="http://www.gradle.org">Gradle 7.4</a> at 25 May 2022, 19:33:14</p>
 </div>
 </div>
 </body>
